@@ -1,5 +1,7 @@
 # Ui-checkbox
 
+[![Build Status](https://travis-ci.org/firefly-ui/ui-checkbox.svg)](https://travis-ci.org/firefly-ui/ui-checkbox)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
