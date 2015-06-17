@@ -2,12 +2,12 @@ import Ember from 'ember';
 import layout from '../templates/components/ui-checkbox';
 
 export default Ember.Component.extend({
-  tagName: 'button',
   layout: layout,
+  value: null,
 
-  classNameBindings: ['checked:active'],
-
-  click() {
-    this.toggleProperty('checked');
+  actions: {
+    sendChange(value) {
+      this.sendAction('on-change', value);
+    }
   }
 });

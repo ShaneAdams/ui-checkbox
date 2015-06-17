@@ -1,3 +1,3 @@
-import uiCheckbox from 'firefly-ui/components/ui-checkbox';
+import uiCheckbox from 'ui-checkbox/components/ui-checkbox';
 
 export default uiCheckbox;
