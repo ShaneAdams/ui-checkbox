@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   value: null,
   type: 'checkbox',
 
-  attributeBindings: ['type', 'checked', 'value'],
+  attributeBindings: ['type', 'checked', 'disabled', 'value'],
 
   change() {
     const value = this.get('value');

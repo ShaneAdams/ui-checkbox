@@ -32,6 +32,21 @@ test('it updates `checked` property to true when clicked', function(assert) {
   assert.equal(component.$('input').prop('checked'), true, 'it updates');
 });
 
+test('when disabled it does not update `checked` property to true when clicked', function(assert) {
+  assert.expect(1);
+
+  var component = this.subject({
+    checked: false,
+    disabled: true
+  });
+
+  this.render();
+
+  component.$('input').click();
+
+  assert.equal(component.$('input').prop('checked'), false, 'it does not update');
+});
+
 test('it unchecks a value', function(assert) {
   assert.expect(2);
 
