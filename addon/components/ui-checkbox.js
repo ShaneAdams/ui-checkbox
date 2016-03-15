@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   layout: layout,
   value: null,
   classNames: ['ff-checkbox'],
+  classNameBindings: ['disabled:ff-disabled'],
 
   actions: {
     sendChange(value) {
