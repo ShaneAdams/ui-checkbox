@@ -47,6 +47,22 @@ test('when disabled it does not update `checked` property to true when clicked',
   assert.equal(component.$('input').prop('checked'), false, 'it does not update');
 });
 
+test('when indeterminate is true it updates both `indeterminate` and `checked` property to true when clicked', function(assert) {
+  assert.expect(2);
+
+  var component = this.subject({
+    checked: false,
+    indeterminate: true
+  });
+
+  this.render();
+
+  component.$('input').click();
+
+  assert.equal(component.$('input').prop('checked'), true, 'it updates checked');
+  assert.equal(component.$('input').prop('indeterminate'), false, 'it updates indeterminate');
+});
+
 test('it unchecks a value', function(assert) {
   assert.expect(2);
 
